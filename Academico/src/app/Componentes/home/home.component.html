@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Personal Académico</title>
+    <link hrel="stylesheet" href="css/styles.css">
+    <style>
+        .dropdown-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="menu-toggle">☰ Personal Académico</div>
+        <div class="notification">
+            <img src="../../../assets/campana'.png" alt="Notificaciones">
+            <div class="notification-count">0</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">General</a>
+            <div class="content" id="procesos-content">
+                <div class="dropdown">
+                    <button class="dropbtn">Procesos</button>
+                    <div class="dropdown-content">
+                        <a routerLink="/control">Control de usuarios</a>
+                        <a routerLink="/admin">Gestión de incidencias</a>
+                        <a href="/comen">Gestión de comentarios</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" id="admin-link">Administrador</a>
+            <div class="content" id="procesos-content">
+                <div class="dropdown">
+                    <button class="dropbtn">Procesos</button>
+                    <div class="dropdown-content">
+                        <a routerLink="/control">Control de usuarios</a>
+                        <a routerLink="/admin">Gestión de incidencias</a>
+                        <a href="/comen">Gestión de comentarios</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#">Docente</a>
+            <div class="content" id="procesos-content">
+                <div class="dropdown">
+                    <button class="dropbtn">Procesos</button>
+                    <div class="dropdown-content">
+                        <a routerLink="/control">Control de usuarios</a>
+                        <a routerLink="/admin">Gestión de incidencias</a>
+                        <a href="/comen">Gestión de comentarios</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#">Alumno</a>
+            <div class="content" id="procesos-content">
+                <div class="dropdown">
+                    <button class="dropbtn">Procesos</button>
+                    <div class="dropdown-content">
+                        <a routerLink="/control">Control de usuarios</a>
+                        <a routerLink="/admin">Gestión de incidencias</a>
+                        <a href="/comen">Gestión de comentarios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const adminLink = document.getElementById("admin-link");
+            const procesosContent = document.getElementById("procesos-content");
+
+            procesosContent.style.display = "none"; // Ocultar por defecto
+
+            adminLink.addEventListener("click", function() {
+                procesosContent.style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>
+<router-outlet></router-outlet>
